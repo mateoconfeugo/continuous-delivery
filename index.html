@@ -31,166 +31,273 @@
         <h1>
 <a name="continuous-delivery" class="anchor" href="#continuous-delivery"><span class="octicon octicon-link"></span></a>continuous-delivery</h1>
 
+<h1>
+<a name="provisioning-developing-releasing-deploying-maintaining" class="anchor" href="#provisioning-developing-releasing-deploying-maintaining"><span class="octicon octicon-link"></span></a>Provisioning, Developing, Releasing, Deploying, Maintaining</h1>
+
+<h2>
+<a name="how-to-be-a-one-armed-paper-hanger" class="anchor" href="#how-to-be-a-one-armed-paper-hanger"><span class="octicon octicon-link"></span></a>How to be a one armed paper hanger</h2>
+
+<p>Using pallet, lein, vmfest, expections and clj-driver to automate your development provisioning release deployment testing system admin stuff especially if running a web based service.</p>
+
+<h2>
+<a name="what-is-my-approach" class="anchor" href="#what-is-my-approach"><span class="octicon octicon-link"></span></a>What is my Approach?</h2>
+
+<p>By effectively combining the various use of clojure libraries one can eliminate much of the drudgery of developing, testing, releasing, deploying and maintaining software</p>
+
+<h2>
+<a name="what-are-the-features-that-make-that-happen" class="anchor" href="#what-are-the-features-that-make-that-happen"><span class="octicon octicon-link"></span></a>What are the features that make that happen</h2>
+
 <ul>
-<li><p>Provisioning, Developing, Releasing, Deploying, Maintaining 
-How to be a one armed paper hanger
-Using pallet, lein, vmfest, expections and clj-driver to automate your development provisioning release deployment testing system admin stuff
-especially if running a web based service.</p></li>
-<li><p>What is my Approach?
-By effectively combining the various use of clojure libraries one can eliminate 
-much of the drudgery of developing, testing, releasing, deploying and maintaining software</p></li>
-<li><p>What are the features that make that happen
-Provide major components of a continuous delivery system
-Programmatically provision system resources
-Run your system of many servers on different providers  via simple single command line commands
-Automated end to end testings
-Test your system in the different computing environments with real servers and real web browsers
-Organize and automate your common tasks in a easily reusable way.</p></li>
-<li><p>Pieces
-Clojure
-Pallet
-Lein
-Vmfest
-Expectations
-clj-driver</p></li>
-<li><p>Clojure?
-Its a lisp based programming language that runs on the java virtual machine and it takes the form of a java library so all sorts of interop is possible and pretty easy.  Clojure does demand you raise your game and pays you richly for doing so.  Clojure is a very powerful pragmatic language thats not very dogmatic. </p></li>
-<li><p>What is pallet?
-** They say
-Pallet is platform for agile and programmatic automation of infrastructure in the cloud, on server racks or directly on virtual machines. Pallet provides cloud provider and operating system independence, and allows for an unprecedented level of customization.
-Pallet is a clojure libary that compiles DSL functions  down to a set shell commands which are run across an ssh connection.</p></li>
-<li><p>Pallet Concepts
-** The Node
-** Node Specs
-** The Computing Service Provider
-*** Getting Setup
-**** Access 
-**** Controlling your environment
-** Server Specs
-** Group Specs
-** Operations
-*** Converge
-*** Lift
-** Crates
-** Actions</p></li>
-<li><p>What is lein?
-Leiningen is the easiest way to use Clojure. With a focus on project automation and declarative configuration, it gets out of your way and lets you focus on your code. lein is the command line implemenation tool of the leiningen project.</p></li>
-<li><p>Lein concepts
-** Plugins</p></li>
-<li><p>What is vmfest?
-VMFest is a PalletOps project to turn VirtualBox into a light-weight cloud provider. This is very useful for when developing cloud automation. VirtualBox's Virtual Machines (VMs) boot very quickly (seconds), so why not take advantage of it?
-VMFest takes the form of a library, and you can use it as a toolkit to create your own virtualization environments.</p></li>
-<li><p>What is clj-driver
-This is a Clojure library for driving an actual web browser using Selenium-WebDriver as the backend. This allows you to acturatelly run simulation of user interations with your application.  Provides higher-level Clojure functions to make interacting with the browser easier.</p></li>
-<li><p>What is expectation 
-expectations is a minimalist's testing framework
+<li>Provide major components of a continuous delivery system</li>
+<li>Programmatically provision system resources</li>
+<li>Run your system of many servers on different providers  via simple single command line commands</li>
+<li>Automated end to end testings</li>
+<li>Test your system in the different computing environments with real servers and real web browsers</li>
+<li>Organize and automate your common tasks in a easily reusable way.</li>
+</ul><h2>
+<a name="pieces" class="anchor" href="#pieces"><span class="octicon octicon-link"></span></a>Pieces</h2>
+
+<ul>
+<li>Clojure</li>
+<li>Pallet</li>
+<li>Lein</li>
+<li>Vmfest</li>
+<li>Expectations</li>
+<li>clj-driver</li>
+</ul><h3>
+<a name="clojure" class="anchor" href="#clojure"><span class="octicon octicon-link"></span></a>Clojure?</h3>
+
+<p>Its a lisp based programming language that runs on the java virtual machine and it takes the form of a java library so all sorts of interop is possible and pretty easy.  Clojure does demand you raise your game and pays you richly for doing so.  Clojure is a very powerful pragmatic language thats not very dogmatic. </p>
+
+<h3>
+<a name="what-is-pallet" class="anchor" href="#what-is-pallet"><span class="octicon octicon-link"></span></a>What is pallet?</h3>
+
+<p>Pallet is platform for agile and programmatic automation of infrastructure in the cloud, on server racks or directly on virtual machines. Pallet provides cloud provider and operating system independence, and allows for an unprecedented level of customization.
+Pallet is a clojure libary that compiles DSL functions  down to a set shell commands which are run across an ssh connection.</p>
+
+<p>Pallet Concepts
+The Node
+Node Specs
+The Computing Service Provider
+Getting Setup
+Access 
+Controlling your environment
+Server Specs
+Group Specs
+Operations
+Converge
+Lift
+Crates
+Actions</p>
+
+<h3>
+<a name="what-is-lein" class="anchor" href="#what-is-lein"><span class="octicon octicon-link"></span></a>What is lein?</h3>
+
+<p>Leiningen is the easiest way to use Clojure. With a focus on project automation and declarative configuration, it gets out of your way and lets you focus on your code. lein is the command line implemenation tool of the leiningen project.</p>
+
+<h3>
+<a name="lein-concepts" class="anchor" href="#lein-concepts"><span class="octicon octicon-link"></span></a>Lein concepts</h3>
+
+<h3>
+<a name="plugins" class="anchor" href="#plugins"><span class="octicon octicon-link"></span></a>Plugins</h3>
+
+<h3>
+<a name="what-is-vmfest" class="anchor" href="#what-is-vmfest"><span class="octicon octicon-link"></span></a>What is vmfest?</h3>
+
+<p>VMFest is a PalletOps project to turn VirtualBox into a light-weight cloud provider. This is very useful for when developing cloud automation. VirtualBox's Virtual Machines (VMs) boot very quickly (seconds), so why not take advantage of it?
+VMFest takes the form of a library, and you can use it as a toolkit to create your own virtualization environments.</p>
+
+<h3>
+<a name="what-is-clj-driver" class="anchor" href="#what-is-clj-driver"><span class="octicon octicon-link"></span></a>What is clj-driver</h3>
+
+<p>This is a Clojure library for driving an actual web browser using Selenium-WebDriver as the backend. This allows you to acturatelly run simulation of user interations with your application.  Provides higher-level Clojure functions to make interacting with the browser easier.</p>
+
+<h3>
+<a name="what-is-expectations" class="anchor" href="#what-is-expectations"><span class="octicon octicon-link"></span></a>What is expectations</h3>
+
+<p>expectations is a minimalist's testing framework
 Simply require expectations and your tests will be run on JVM shutdown.
 What you are testing is inferred from the expected and actual types
 Stacktraces are trimmed of clojure library lines and java.lang lines
-Focused error &amp; failure messages</p></li>
-<li><p>How it works together to make your life easier</p></li>
-</ul><p>** lein pallet plugin
-A leiningen plugin for running pallet tasks for a pallet deployment project.
-*** How to
-Make a Crate
+Focused error &amp; failure messages</p>
+
+<h1>
+<a name="how-it-works-together-to-make-your-life-easier" class="anchor" href="#how-it-works-together-to-make-your-life-easier"><span class="octicon octicon-link"></span></a>How it works together to make your life easier</h1>
+
+<h2>
+<a name="lein-pallet-plugin" class="anchor" href="#lein-pallet-plugin"><span class="octicon octicon-link"></span></a>lein pallet plugin</h2>
+
+<p>A leiningen plugin for running pallet tasks for a pallet deployment project.</p>
+
+<h3>
+<a name="how-to" class="anchor" href="#how-to"><span class="octicon octicon-link"></span></a>How to</h3>
+
+<p>Make a Crate
 Pass arguments to converge/lift operations</p>
 
-<p>** Release/Deploy/Maintain on the following conceptal system environments
-*** Locally - dev
-*** On virtual machines  running locally - dev-qa
-*** On cloud test servers
-*** On cloud QA servers
-*** On cloud production blue
-*** On cloud production green</p>
+<h2>
+<a name="releasedeploymaintain-on-the-following-conceptal-system-environments" class="anchor" href="#releasedeploymaintain-on-the-following-conceptal-system-environments"><span class="octicon octicon-link"></span></a>Release/Deploy/Maintain on the following conceptal system environments</h2>
 
-<p>** lein expectations
-A leiningen plugin to make running tests written using expectations library.</p>
+<h3>
+<a name="locally---dev" class="anchor" href="#locally---dev"><span class="octicon octicon-link"></span></a>Locally - dev</h3>
 
-<p>** lein autoexpect 
-Leiningen plug-in for automatically running expectations whenever your Clojure project's source changes.</p>
+<h3>
+<a name="on-virtual-machines--running-locally---dev-qa" class="anchor" href="#on-virtual-machines--running-locally---dev-qa"><span class="octicon octicon-link"></span></a>On virtual machines  running locally - dev-qa</h3>
 
-<ul>
-<li>Organize
-How you organize all this is key 
-** [project-name].nodes.[domain-of-concern]
-** [project-name].servers.[domain-of-concern]
-** [project-name].groups.[domain-of-concern]</li>
-</ul><p><em>Examples of the different operations 
-*</em>  lein pallet  converge monitoring.groups.monitoring/monitoring 2 -P :vmfest
-Create 2 virtual box instances of the node described in the ~/.pallet/services/vmfest.clj file and name them according to the group spec referred via its namespace. 
-** lein pallet  lift monitoring.groups.monitoring/monitoring  -P :vmfest
-Apply the server-specs to the specified group of existing nodes
-**  lein pallet  converge monitoring.groups.monitoring/monitoring 0 -P :vmfest
-Teardown the system
-**  lein pallet  converge monitoring.groups.monitoring/monitoring 1 -P :qa-cloud
-creates 1 node in the cloud with a qa node and installs the monitoring group specification </p>
+<h3>
+<a name="on-cloud-test-servers" class="anchor" href="#on-cloud-test-servers"><span class="octicon octicon-link"></span></a>On cloud test servers</h3>
 
-<p>** Testing aspect
-Tests can spin up the system in the desired environment and have control the web browser
+<h3>
+<a name="on-cloud-qa-servers" class="anchor" href="#on-cloud-qa-servers"><span class="octicon octicon-link"></span></a>On cloud QA servers</h3>
+
+<h3>
+<a name="on-cloud-production-blue" class="anchor" href="#on-cloud-production-blue"><span class="octicon octicon-link"></span></a>On cloud production blue</h3>
+
+<h3>
+<a name="on-cloud-production-green" class="anchor" href="#on-cloud-production-green"><span class="octicon octicon-link"></span></a>On cloud production green</h3>
+
+<h2>
+<a name="lein-expectations" class="anchor" href="#lein-expectations"><span class="octicon octicon-link"></span></a>lein expectations</h2>
+
+<p>A leiningen plugin to make running tests written using expectations library.</p>
+
+<h2>
+<a name="lein-autoexpect" class="anchor" href="#lein-autoexpect"><span class="octicon octicon-link"></span></a>lein autoexpect</h2>
+
+<p>Leiningen plug-in for automatically running expectations whenever your Clojure project's source changes.</p>
+
+<h1>
+<a name="organize" class="anchor" href="#organize"><span class="octicon octicon-link"></span></a>Organize</h1>
+
+<p>How you organize all this is key </p>
+
+<h2>
+<a name="project-namenodesdomain-of-concern" class="anchor" href="#project-namenodesdomain-of-concern"><span class="octicon octicon-link"></span></a>[project-name].nodes.[domain-of-concern]</h2>
+
+<h2>
+<a name="project-nameserversdomain-of-concern" class="anchor" href="#project-nameserversdomain-of-concern"><span class="octicon octicon-link"></span></a>[project-name].servers.[domain-of-concern]</h2>
+
+<h2>
+<a name="project-namegroupsdomain-of-concern" class="anchor" href="#project-namegroupsdomain-of-concern"><span class="octicon octicon-link"></span></a>[project-name].groups.[domain-of-concern]</h2>
+
+<h1>
+<a name="examples-of-the-different-operations" class="anchor" href="#examples-of-the-different-operations"><span class="octicon octicon-link"></span></a>Examples of the different operations</h1>
+
+<h2>
+<a name="lein-pallet--converge-monitoringgroupsmonitoringmonitoring-2--p-vmfest" class="anchor" href="#lein-pallet--converge-monitoringgroupsmonitoringmonitoring-2--p-vmfest"><span class="octicon octicon-link"></span></a>lein pallet  converge monitoring.groups.monitoring/monitoring 2 -P :vmfest</h2>
+
+<p>Create 2 virtual box instances of the node described in the ~/.pallet/services/vmfest.clj file and name them according to the group spec referred via its namespace. </p>
+
+<h2>
+<a name="lein-pallet--lift-monitoringgroupsmonitoringmonitoring---p-vmfest" class="anchor" href="#lein-pallet--lift-monitoringgroupsmonitoringmonitoring---p-vmfest"><span class="octicon octicon-link"></span></a>lein pallet  lift monitoring.groups.monitoring/monitoring  -P :vmfest</h2>
+
+<p>Apply the server-specs to the specified group of existing nodes</p>
+
+<h2>
+<a name="lein-pallet--converge-monitoringgroupsmonitoringmonitoring-0--p-vmfest" class="anchor" href="#lein-pallet--converge-monitoringgroupsmonitoringmonitoring-0--p-vmfest"><span class="octicon octicon-link"></span></a>lein pallet  converge monitoring.groups.monitoring/monitoring 0 -P :vmfest</h2>
+
+<p>Teardown the system</p>
+
+<h2>
+<a name="lein-pallet--converge-monitoringgroupsmonitoringmonitoring-1--p-qa-cloud" class="anchor" href="#lein-pallet--converge-monitoringgroupsmonitoringmonitoring-1--p-qa-cloud"><span class="octicon octicon-link"></span></a>lein pallet  converge monitoring.groups.monitoring/monitoring 1 -P :qa-cloud</h2>
+
+<p>creates 1 node in the cloud with a qa node and installs the monitoring group specification </p>
+
+<h1>
+<a name="testing-aspect" class="anchor" href="#testing-aspect"><span class="octicon octicon-link"></span></a>Testing aspect</h1>
+
+<p>Tests can spin up the system in the desired environment and have control the web browser
 to perform actions against the system then check the various pieces to test for the desired
 affect. Using autoexpect you can always be running your tests as you run your system in 
 a local environment or on virtual boxes.  Since pallet is just a library its very easy to
 programmaticaly do whatever.</p>
 
-<ul>
-<li><p>Typical system
-** Load balancer ???
-** Web server proxy (nginx)
-** Database server (mysql)
-** Configuration Server (zookeeper)
-** File Server (nfs)
-** Application Server wine-celler.jar</p></li>
-<li><p>System Admin Task Areas
-;;======================================================================
-;; Server specifications: These are the servers that make up a 
-;; onlines physical presence
-;; Things to specify
-;; 1: Users and Groups
-;; 2: Application and 3rd Party Packages
-;; 3: Cronjobs
-;; 4: Services
-;; 5: Files
-;; 6: Symbolic Links
-;;======================================================================</p></li>
-</ul><p>What files need to be put in place</p>
+<h1>
+<a name="typical-system" class="anchor" href="#typical-system"><span class="octicon octicon-link"></span></a>Typical system</h1>
 
 <ul>
-<li>Application libraries</li>
-<li>Startup and supervise scripts</li>
-<li>Third party dependencies</li>
-<li>CMS published files</li>
-<li><p>configuration files</p></li>
-<li><p>Provisioning scenarios
-The software is run several different environments
-** DEVELOPMENT
-Every thing runs local on the developers single box.   The testing
+<li> Load balancer ???</li>
+<li> Web server proxy (nginx)</li>
+<li> Database server (mysql)</li>
+<li> Configuration Server (zookeeper)</li>
+<li> File Server (nfs)</li>
+<li> Application Server wine-celler.jar</li>
+</ul><h1>
+<a name="system-admin-task-areas" class="anchor" href="#system-admin-task-areas"><span class="octicon octicon-link"></span></a>System Admin Task Areas</h1>
+
+<p>Server specifications: These are the servers that make up a 
+ onlines physical presence
+ Things to specify
+1. Users and Groups
+2. Application and 3rd Party Packages
+3. Cronjobs
+4. Services
+5. Files
+6.  Symbolic Links</p>
+
+<h1>
+<a name="what-files-need-to-be-put-in-place" class="anchor" href="#what-files-need-to-be-put-in-place"><span class="octicon octicon-link"></span></a>What files need to be put in place</h1>
+
+<h2>
+<a name="application-libraries" class="anchor" href="#application-libraries"><span class="octicon octicon-link"></span></a>Application libraries</h2>
+
+<h2>
+<a name="startup-and-supervise-scripts" class="anchor" href="#startup-and-supervise-scripts"><span class="octicon octicon-link"></span></a>Startup and supervise scripts</h2>
+
+<h2>
+<a name="third-party-dependencies" class="anchor" href="#third-party-dependencies"><span class="octicon octicon-link"></span></a>Third party dependencies</h2>
+
+<h2>
+<a name="cms-published-files" class="anchor" href="#cms-published-files"><span class="octicon octicon-link"></span></a>CMS published files</h2>
+
+<h2>
+<a name="configuration-files" class="anchor" href="#configuration-files"><span class="octicon octicon-link"></span></a>configuration files</h2>
+
+<h1>
+<a name="provisioning-scenarios" class="anchor" href="#provisioning-scenarios"><span class="octicon octicon-link"></span></a>Provisioning scenarios</h1>
+
+<p>The software is run several different environments</p>
+
+<h2>
+<a name="development" class="anchor" href="#development"><span class="octicon octicon-link"></span></a>DEVELOPMENT</h2>
+
+<p>Every thing runs local on the developers single box.   The testing
 suite is run from the same box.  This scenario is what is used when
 the developer has created a feature branch and working locally  where
 they can't do any damage.   All the java dependencies are satisfied
 using a local maven repository.  This scenario employs  lein
-autoexpect plugin so that the testing suite is always running.</p></li>
-</ul><p>** DEV QA
-Everything is checked out and built from scratch on the host and deployed from there
+autoexpect plugin so that the testing suite is always running.</p>
+
+<h2>
+<a name="dev-qa" class="anchor" href="#dev-qa"><span class="octicon octicon-link"></span></a>DEV QA</h2>
+
+<p>Everything is checked out and built from scratch on the host and deployed from there
 to virtual box machines the host spins to  simulate the production
 infrastructure  the various parts of the system.   The host then runs
 the acceptance tests against the virtual system before the feature
 branch is merged back into the  development branch.  Then the
 develop branch publishes the feature into github.</p>
 
-<p>** QA RELEASE
-Testing scenarios can be run on  the cloud hosted node/box/machine.
+<h2>
+<a name="qa-release" class="anchor" href="#qa-release"><span class="octicon octicon-link"></span></a>QA RELEASE</h2>
+
+<p>Testing scenarios can be run on  the cloud hosted node/box/machine.
 The ops/qa  starts is process of getting, building, package,
 provisioning and deploying  when a release is started.  The ops/qa
 server will then run the acceptance tests against against the system
-it just spun up.<br>
- When the acceptance test pass its time to finish the release.<br>
-*** This will mean the release branch is merged into develop and into master
-*** The master branch is tagged
-*** The release branch is removed
-*** The newly spun up QA environment is now the blue/green environment depending on what production is</p>
+it just spun up.  </p>
 
-<p>** PRODUCTION RELEASE
-The overall idea is the traffic will slowly be shunted from the
+<p>When the acceptance test pass its time to finish the release.  </p>
+
+<ul>
+<li>This will mean the release branch is merged into develop and into master</li>
+<li>The master branch is tagged</li>
+<li>The release branch is removed</li>
+<li>The newly spun up QA environment is now the blue/green environment depending on what production is</li>
+</ul><h2>
+<a name="production-release" class="anchor" href="#production-release"><span class="octicon octicon-link"></span></a>PRODUCTION RELEASE</h2>
+
+<p>The overall idea is the traffic will slowly be shunted from the
 previous releases prod environment to the environment that was spun up
 in the QA RELEASE.  When it deemed save the ratio of resources in
 shifted from the previous release production environment to the new
@@ -204,40 +311,65 @@ replication slaves</p>
 <p>customers can choose between sharing resources (less
 expensive) or having their own dedicated servers in the cloud</p>
 
-<p>***  ASSETS
-**** Databases
-***** Shared amongst clients
-***** Internal
-**** Online Servers</p>
+<h2>
+<a name="assets" class="anchor" href="#assets"><span class="octicon octicon-link"></span></a>ASSETS</h2>
 
-<p>*** CUSTOMER ASSETS</p>
+<h3>
+<a name="databases" class="anchor" href="#databases"><span class="octicon octicon-link"></span></a>Databases</h3>
+
+<h3>
+<a name="shared-amongst-clients" class="anchor" href="#shared-amongst-clients"><span class="octicon octicon-link"></span></a>Shared amongst clients</h3>
+
+<h3>
+<a name="internal" class="anchor" href="#internal"><span class="octicon octicon-link"></span></a>Internal</h3>
+
+<h3>
+<a name="online-servers" class="anchor" href="#online-servers"><span class="octicon octicon-link"></span></a>Online Servers</h3>
+
+<h2>
+<a name="customer-assets" class="anchor" href="#customer-assets"><span class="octicon octicon-link"></span></a>CUSTOMER ASSETS</h2>
 
 <p>All the servers that make up system can be run as any user</p>
 
-<p>** DEVELOPMENT
-NEW DEVELOPMENT SETUP ON EXISTING NODE (developer laptop)
-** Checkout project and publish cms resources to a pre-existing box (node)
-** This will require a pallet crate that manipulates bricolage
-** Checkout Git
-** determine what user to run under</p>
+<h1>
+<a name="development-1" class="anchor" href="#development-1"><span class="octicon octicon-link"></span></a>DEVELOPMENT</h1>
 
-<p>** TEST
-All These scenarios will have to check out the source and build the
+<p>NEW DEVELOPMENT SETUP ON EXISTING NODE (developer laptop)</p>
+
+<ul>
+<li>Checkout project and publish cms resources to a pre-existing box (node)</li>
+<li>This will require a pallet crate that manipulates bricolage</li>
+<li>Checkout Git</li>
+<li>determine what user to run under</li>
+</ul><h1>
+<a name="test" class="anchor" href="#test"><span class="octicon octicon-link"></span></a>TEST</h1>
+
+<p>All These scenarios will have to check out the source and build the
 individual pieces from scratch.  These parts are then used  in the
 following TEST scenarios</p>
 
+<h2>
+<a name="complete-system-running-locally--shared-libraries" class="anchor" href="#complete-system-running-locally--shared-libraries"><span class="octicon octicon-link"></span></a>COMPLETE SYSTEM RUNNING LOCALLY  SHARED LIBRARIES</h2>
+
+<p>CONDITIONS Requirements</p>
+
 <ul>
-<li><p>COMPLETE SYSTEM RUNNING LOCALLY  SHARED LIBRARIES
-** CONDITIONS Requirements
-*** All the java servers are bundled up in jar file and uses the dependencies in the local .m2 repository
-*** Each server running as a unique unix user but part of a common group
-*** All acceptance, component, and unit test can run  without any internet connection</p></li>
-<li><p>COMPLETE SYSTEM RUNNING LOCALLY  UBERJARS
-All the java servers are bundled up in single file standalone uberjars</p></li>
-<li><p>COMPLETE SYSTEM RUNNING ON LOCALLY HOSTED VIRTUAL MACHINES</p></li>
-<li><p>INDIVIDUAL SERVERS AND DEPENDENCIES RUNNING LOCALLY</p></li>
-<li><p>INDIVIDUAL SERVERS AND DEPENDENCIES RUNNING ON LOCALLY HOSTED VIRTUAL MACHINES</p></li>
-</ul>
+<li>All the java servers are bundled up in jar file and uses the dependencies in the local .m2 repository</li>
+<li>Each server running as a unique unix user but part of a common group</li>
+<li>All acceptance, component, and unit test can run  without any internet connection</li>
+</ul><h1>
+<a name="complete-system-running-locally--uberjars" class="anchor" href="#complete-system-running-locally--uberjars"><span class="octicon octicon-link"></span></a>COMPLETE SYSTEM RUNNING LOCALLY  UBERJARS</h1>
+
+<ul>
+<li>All the java servers are bundled up in single file standalone uberjars</li>
+</ul><h1>
+<a name="complete-system-running-on-locally-hosted-virtual-machines" class="anchor" href="#complete-system-running-on-locally-hosted-virtual-machines"><span class="octicon octicon-link"></span></a>COMPLETE SYSTEM RUNNING ON LOCALLY HOSTED VIRTUAL MACHINES</h1>
+
+<h1>
+<a name="individual-servers-and-dependencies-running-locally" class="anchor" href="#individual-servers-and-dependencies-running-locally"><span class="octicon octicon-link"></span></a>INDIVIDUAL SERVERS AND DEPENDENCIES RUNNING LOCALLY</h1>
+
+<h1>
+<a name="individual-servers-and-dependencies-running-on-locally-hosted-virtual-machines" class="anchor" href="#individual-servers-and-dependencies-running-on-locally-hosted-virtual-machines"><span class="octicon octicon-link"></span></a>INDIVIDUAL SERVERS AND DEPENDENCIES RUNNING ON LOCALLY HOSTED VIRTUAL MACHINES</h1>
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/mateoconfeugo">mateoconfeugo</a></p>
