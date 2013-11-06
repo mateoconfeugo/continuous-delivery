@@ -30,6 +30,8 @@
         <h1>
 <a name="continuous-delivery" class="anchor" href="#continuous-delivery"><span class="octicon octicon-link"></span></a>continuous-delivery</h1>
 
+<h4>This is a work in progress - more of a place for me to keep track of things - hopefull it will lead to a  DSL for test management</h4>
+
 <h2>Provisioning, Developing, Releasing, Deploying, Maintaining</h2>
 
 <p>Using pallet, lein, vmfest, expections and clj-driver to automate your development provisioning release deployment testing system admin stuff especially if running a web based service.</p>
@@ -196,8 +198,26 @@ Pass arguments to converge/lift operations</p>
 
 <p>creates 1 node in the cloud with a qa node and installs the monitoring group specification </p>
 
-<h1>
-<a name="testing-aspect" class="anchor" href="#testing-aspect"><span class="octicon octicon-link"></span></a>Testing aspect</h1>
+<h2>Testing aspect</h2>
+
+<p>Organizing and maintaining tests is central to be continually improving the feature set and the quality of tests</p>
+
+<h3>Common problems with software tests
+<ul>
+  <li>Easy to duplicate test suite framework, setup/teardown type code</li>
+  <li>Tests rely on temporatal data and stop working as time goes on</li>
+</ul>
+
+<h3>Techniques</h3>
+<ul>
+  <li>System Description</li>
+  <li>Critical High Risk Functions</li>
+  <li>Requirements Matrix</li>
+  <li>Test Environment</li>
+  <li>Test Data</li>
+  <li>Test Plan</li>
+</ul>
+
 
 <p>Tests can spin up the system in the desired environment and have control the web browser
 to perform actions against the system then check the various pieces to test for the desired
